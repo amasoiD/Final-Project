@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCP VPS Optimizer - Console</title>
+    <link rel="stylesheet" href="css/index.css"> 
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="logo">GCP Opt.</div>
+        <ul>
+            <li class="active" onclick="switchTab('overview')" data-tab="overview">系統概況 (Overview)</li>
+            <li onclick="switchTab('calculator')" data-tab="calculator">成本試算 (Calculator)</li>
+            <li onclick="switchTab('generator')" data-tab="generator">腳本生成 (Generator)</li>
+            <li onclick="logout()">登出 (Logout)</li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <header class="monitor-panel">
+            <div class="monitor-info">
+                <h3>Server Load Monitor</h3>
+                <p>Status: <span style="color:#0f0">Online</span> | Latency: <span id="latencyValue">24ms</span></p>
+            </div>
+            <canvas id="trafficChart"></canvas>
+        </header>
+
+        <div id="workspace" class="workspace">
+            <div class="placeholder-text">正在連線至虛擬主機資源庫...</div>
+        </div>
+
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="title">user@gcp-instance: ~</span>
+            </div>
+            <div class="terminal-body" id="consoleOutput">
+                <div class="line">Initializing system tools... [OK]</div>
+                <div class="line">Ready. Waiting for commands...</div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
