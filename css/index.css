@@ -131,3 +131,42 @@ html::before {
     80% { transform: translateX(10px); }
     100% { transform: translateX(0); }
 }
+
+/* 手機版優化*/
+@media (max-width: 768px) {
+    .box {
+        width: 90%;
+        height: auto;
+        min-height: 50rem;
+        flex-direction: column;
+        margin: 10% auto;
+    }
+
+    .box .left {
+        display: none;
+    }
+
+    .box .right {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .box .right h4 {
+        margin-top: 2rem;
+    }
+
+    .box .right form .acc {
+        width: 100%;
+    }
+
+    .right .submit {
+        width: 100%;
+        margin: 4rem 0 0 0;
+        transform: none;
+    }
+    
+    .right .fn {
+        width: 100%;
+        justify-content: space-around;
+    }
+}
