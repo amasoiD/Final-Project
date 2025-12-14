@@ -319,3 +319,97 @@ body {
     50% { opacity: 1; }
     100% { opacity: 0.5; }
 }
+
+/* 手機版優化*/
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.5);
+        background-color: rgba(255, 255, 255, 0.8);
+        flex-shrink: 0;
+    }
+
+    .sidebar .logo {
+        margin-bottom: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        overflow-x: auto;
+        padding-bottom: 5px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .sidebar li {
+        white-space: nowrap;
+        margin-bottom: 0;
+        padding: 0.8rem 1.5rem;
+        font-size: 1.4rem;
+        background: rgba(255,255,255,0.5);
+    }
+
+    .content {
+        padding: 1rem;
+        overflow: visible;
+        height: auto;
+    }
+
+    .monitor-panel {
+        min-height: 15rem;
+        padding: 1.5rem;
+    }
+
+    .workspace {
+        padding: 1.5rem;
+    }
+
+    .workspace > div {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .workspace label {
+        margin-bottom: 0.2rem;
+    }
+
+    .workspace input, 
+    .workspace select, 
+    .workspace button.submit {
+        width: 100% !important;
+        height: 4.5rem !important;
+        margin-right: 0;
+    }
+    
+    #storageSize {
+        width: 100% !important;
+    }
+
+    .workspace div > div {
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+    .workspace input[type="checkbox"] {
+        width: 25px !important;
+        height: 25px !important;
+    }
+
+    .terminal-window {
+        height: 30rem;
+        margin-bottom: 2rem;
+    }
+}
