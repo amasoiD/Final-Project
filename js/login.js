@@ -39,7 +39,7 @@ loginForm.addEventListener('submit', function(e) {
             localStorage.setItem('isLoggedIn', 'true');
             localStorage.setItem('currentUser', userVal);
             
-            // 跳轉到主畫面 (假設主畫面是 dashboard.html)
+            // 跳轉到主畫面
             window.location.href = 'dashboard.html'; 
         } else {
             // 登入失敗
