@@ -126,7 +126,7 @@ function switchTab(tabName) {
         <h2>系統概況 (System Overview)</h2>
         <div class="overview-panel">
             <p><strong>連線狀態:</strong> <span style="color:green">● 穩定 (Stable)</span></p>
-            <p><strong>目前專案:</strong> My-Minecraft-Server-2025</p>
+            <p><strong>目前專案:</strong> My-Final-Project-2025</p>
             <p><strong>運行時間:</strong> 12 Days, 4 Hours</p>
             <hr style="margin:15px 0; border:0; border-top:1px solid #ccc;">
             <p>歡迎使用 GCP VPS 優化助手。請從左側選單選擇功能開始操作。</p>
